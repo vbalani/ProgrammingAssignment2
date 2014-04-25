@@ -1,15 +1,20 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Take an assumed square matrix invert it and cache it.
+## second function will check if the cached object doesnt  exists then calc its inverse
 
-## Write a short comment describing this function
+## cache the inversion of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    m <- NULL
+	m <<- solve(x)
 }
 
 
-## Write a short comment describing this function
+## if the inverted matrix is not in cache then invert it
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+		if (!exists("m"))	{
+			message("have to calc inverse of matrix")
+			return(solve(x)) 
+			}	else { m }		
 }
