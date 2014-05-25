@@ -14,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 		if (!exists("m"))	{
-			message("have to calc inverse of matrix")
+			message("inverted matrix not in cache - calc inverse of matrix")
 			return(solve(x)) 
 			}	else { m }		
 }
